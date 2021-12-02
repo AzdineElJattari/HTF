@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Menu from "./Menu";
 import Checklist from "./Checklist";
+import axios from "axios"
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Intro from "./Intro";
 import Cluedo from "./Cluedo/Cluedo";
@@ -11,7 +12,7 @@ export const CluesContext = React.createContext();
 
 export const Main = () => {
   const { settings, setSettings } = useSettings();
-  const [clues, setClues] = useState();
+  const [clues, setClues] = useState([]);
 
   useEffect(() => {
     setSettings({
@@ -34,11 +35,27 @@ export const Main = () => {
     });
   }, [setSettings]);
 
+   const getClues = async () => {
+    axios
+    .get(process.env.REACT_APP_BASE_URL + process.env.REACT_APP_URL_CLUES, {
+      auth: {
+        username: process.env.REACT_APP_USERNAME,
+        password: process.env.REACT_APP_PASSWORD,
+      },
+    })
+    .then((response) => {
+      setClues(response.data);
+    })
+    .catch((error) => console.log(error));
+  
+};
+
   useEffect(() => {
     if (settings) {
-      // De settings zijn geladen, haal hier de aanwijzingen op en bewaar ze in de state (setClues)
-    }
-  }, [settings]);
+
+      //Clues array
+      getClues();
+}}, [settings]);
 
   return (
     <Router>
