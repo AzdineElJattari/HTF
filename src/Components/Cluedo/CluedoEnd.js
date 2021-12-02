@@ -1,16 +1,10 @@
 import React from "react";
-
-/*
-   GAME OVER
-   ---------
-   In dit component bouw je het endgame scherm.
-*/
+import { Image } from 'semantic-ui-react'
 
 const GameOver = () => {
   return (
-    <div className="full file">
-      Toon hier de Game Over pagina met het opgegeven antwoord en de juiste
-      oplossing.
+    <div className="gameover-container">
+      <Image src='https://static.wikia.nocookie.net/fantendo/images/b/bc/CluedoMurderMystery.png/revision/latest?cb=20210517112833' fluid />
     </div>
   );
 };

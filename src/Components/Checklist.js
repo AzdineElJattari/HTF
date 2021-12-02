@@ -3,12 +3,12 @@ import { useState } from "react";
 const tasks = [
   {
     id: 0,
-    completed: false,
+    completed: true,
     description: "Toon verdachten, wapens en kamers op de aanwijzingen pagina.",
   },
   {
     id: 1,
-    completed: false,
+    completed: true,
     description: "Start een spel en toon de kamers van het huis.",
   },
   {

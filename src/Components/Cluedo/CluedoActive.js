@@ -5,18 +5,19 @@ import { Mansion } from "./Mansion";
 import Notebook from "../Notebook/Notebook";
 import { MakeSuggestionForm } from "../Forms/MakeSuggestionForm";
 import { MakeArrestForm } from "../Forms/MakeArrestForm";
+import { useHistory } from "react-router-dom";
 
-/*
-   CLUEDO ACTIVE
-   -------------
-   Dit is het hart van het spel. We hebben reeds wat basis logica en flow klaargezet, aan jullie om de juiste invulling te geven.
-*/
 
 const CluedoActive = ({ gameKey, onEndGame, onArrest }) => {
   const [log, setLog] = useState([]);
   const [room, setRoom] = useState(null);
-
   const [isArrest, setIsArrest] = useState(false);
+  const history = useHistory();
+
+  const winGame = () => {
+    history.goBack();
+    alert("Game won!")
+  }
 
   return (
     <div className="file full">
@@ -30,11 +31,12 @@ const CluedoActive = ({ gameKey, onEndGame, onArrest }) => {
       {isArrest && <MakeArrestForm gameKey={gameKey} onArrest={onArrest} />}
       {!room && !isArrest && (
         <div>
-          <h2>Cluedo</h2>
+          <h2>Welkom bij het Cluedo spel!</h2>
           <Mansion onSelectRoom={setRoom} />
           <div className="cluedo-btn-box">
             <Button value="Maak arrestatie" onClick={() => setIsArrest(true)} />
             <Button value="Spel Stoppen" onClick={onEndGame} />
+            <Button value="Spel automatisch winnen" onClick={winGame} />
           </div>
         </div>
       )}

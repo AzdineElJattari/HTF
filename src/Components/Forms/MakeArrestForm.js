@@ -1,11 +1,6 @@
 import React from "react";
 import { useSettings } from "../context/useSettings";
-
-/*
-   HET ARRESTATIE FORMULIER
-   ------------------------
-   Maak hier een formulier om een arrestatie te verrichten.
-*/
+import { Button, Checkbox, Form } from 'semantic-ui-react'
 
 export const MakeArrestForm = ({ gameKey, onArrest }) => {
   const { settings } = useSettings();
@@ -13,7 +8,22 @@ export const MakeArrestForm = ({ gameKey, onArrest }) => {
   return (
     <div>
       <h2>Maak een arrestatie</h2>
-      <p>Maak een formulier om een arrestatie te maken.</p>
+      <Form>
+    <Form.Field>
+      <label>Kamer</label>
+      <input placeholder='Room' />
+    </Form.Field>
+    <Form.Field>
+      <label>Wapen</label>
+      <input placeholder='Weapon' />
+    </Form.Field>
+    <Form.Field>
+      <label>Verdachte</label>
+      <input placeholder='Verdachte' />
+    </Form.Field>
+
+    <Button color="black" type='submit'>Arrestatie starten!</Button>
+  </Form>
     </div>
   );
 };

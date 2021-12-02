@@ -1,25 +1,22 @@
 import React from "react";
 import {useSettings} from "../context/useSettings";
 import Button from "../Button";
-
-/*
-   CLUEDO START
-   ------------
-   In dit component moet je een nieuw spel genereren via de api.
-   Geef de nieuwe gameKey mee aan de onStart functie (zie props).
-*/
+import { Grid, GridColumn, Image } from 'semantic-ui-react'
 
 const CluedoStart = ({ onStart }) => {
   const { settings } = useSettings();
 
   const startGame = () => {
-    //
+    onStart();
   };
 
   return (
     <div className={"file full"}>
-      <h2>Cluedo</h2>
-      <Button onClick={startGame} value="Start een nieuw spel" />
+      <h2>Welkom bij het Cluedo spel!</h2>
+      <div style={{ display: "flex", justifyContent: "end", width: "25%", marginLeft: "30%", marginTop: "5%" }}>
+      <Image src='https://cdn.pixabay.com/photo/2020/01/23/09/22/detective-4787272_1280.png' fluid rounded />
+      </div>
+      <Button style={{marginTop: "5%"}} onClick={startGame} value="Start een nieuw spel" />
     </div>
   );
 };

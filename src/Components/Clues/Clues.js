@@ -14,10 +14,10 @@ const Clues = () => {
 <Table celled>
 <Table.Header>
 <Table.Row>
-<Table.HeaderCell>Title</Table.HeaderCell>
-<Table.HeaderCell>Color</Table.HeaderCell>
-<Table.HeaderCell>Description</Table.HeaderCell>
-<Table.HeaderCell>Image</Table.HeaderCell>
+<Table.HeaderCell>Titel</Table.HeaderCell>
+<Table.HeaderCell>Kleur</Table.HeaderCell>
+<Table.HeaderCell>Descriptie</Table.HeaderCell>
+<Table.HeaderCell>Foto</Table.HeaderCell>
 
 </Table.Row>
 </Table.Header>
@@ -42,10 +42,10 @@ return true;
 <Table celled>
 <Table.Header>
 <Table.Row>
-<Table.HeaderCell>Title</Table.HeaderCell>
-<Table.HeaderCell>Color</Table.HeaderCell>
-<Table.HeaderCell>Description</Table.HeaderCell>
-<Table.HeaderCell>Image</Table.HeaderCell>
+<Table.HeaderCell>Titel</Table.HeaderCell>
+<Table.HeaderCell>Kleur</Table.HeaderCell>
+<Table.HeaderCell>Descriptie</Table.HeaderCell>
+<Table.HeaderCell>Foto</Table.HeaderCell>
 
 </Table.Row>
 </Table.Header>
@@ -70,10 +70,10 @@ return true;
 <Table celled>
 <Table.Header>
 <Table.Row>
-<Table.HeaderCell>Title</Table.HeaderCell>
-<Table.HeaderCell>Color</Table.HeaderCell>
-<Table.HeaderCell>Description</Table.HeaderCell>
-<Table.HeaderCell>Image</Table.HeaderCell>
+<Table.HeaderCell>Titel</Table.HeaderCell>
+<Table.HeaderCell>Kleur</Table.HeaderCell>
+<Table.HeaderCell>Descriptie</Table.HeaderCell>
+<Table.HeaderCell>Foto</Table.HeaderCell>
 
 </Table.Row>
 </Table.Header>

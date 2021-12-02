@@ -1,11 +1,6 @@
 import React from "react";
 import { useSettings } from "../context/useSettings";
-
-/*
-   SUGGESTIE FORMULIER
-   -------------------
-   Maak hier een formulier om een suggestie te verrichten.
-*/
+import { Button, Form } from 'semantic-ui-react'
 
 export const MakeSuggestionForm = ({ gameKey, selectedRoom }) => {
   const { settings } = useSettings();
@@ -13,7 +8,22 @@ export const MakeSuggestionForm = ({ gameKey, selectedRoom }) => {
   return (
     <div>
       <h2>Maak een suggestie</h2>
-      <p>Maak een formulier om een suggestie te maken.</p>
+      <Form>
+    <Form.Field>
+      <label>Kamer</label>
+      <input placeholder='Room' />
+    </Form.Field>
+    <Form.Field>
+      <label>Wapen</label>
+      <input placeholder='Weapon' />
+    </Form.Field>
+    <Form.Field>
+      <label>Verdachte</label>
+      <input placeholder='Verdachte' />
+    </Form.Field>
+
+    <Button color="black" type='submit'>Arrestatie starten!</Button>
+  </Form>
     </div>
   );
 };
