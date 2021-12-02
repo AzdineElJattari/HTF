@@ -43,7 +43,7 @@ export const Main = () => {
   return (
     <Router>
       <div className="App">
-        <h1>Hack The Future</h1>
+        <h1>Hack The Future - 2021/2022</h1>
         <div className={"panel-1"}>
           <Menu />
           <Checklist />
