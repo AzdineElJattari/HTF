@@ -38,7 +38,7 @@ const Intro = () => {
 
       <div style={{ width: "48%", float: "right", marginTop: "15px" }}>
         <Link to="/clues" className="btn">
-          Aan de slag
+          Aan de slag!
         </Link>
       </div>
     </div>
